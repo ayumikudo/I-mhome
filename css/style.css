@@ -1,0 +1,557 @@
+@charset "UTF-8";
+
+body{
+	font-family: 'Kosugi', sans-serif;
+	font-size: 62.5%;
+	color: #333333;
+}
+a {
+	color: #333333;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+/* ヘッダー */
+header {
+	width: 100%;
+	padding: 20px 0;
+}
+header .header_inner {
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+header h1 {
+	margin-right: 40px;
+}
+header h1 a:hover {
+	opacity: 0.6;
+}
+header h1 img {
+	width: 150px;
+	height: auto;
+}
+header ul {
+	display: flex;
+}
+header nav li {
+	border-left: 1px solid #C4C4C4;
+}
+header nav li:nth-child(4) {
+	border-right: 1px solid #C4C4C4;
+}
+header nav li a {
+	display: block;
+	text-align: center;
+	padding: 5px 30px;
+}
+header nav li a:hover {
+	background-color: #f5f5f5;
+}
+header nav ul li img {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+header nav ul li span {
+	display: inline-block;
+	font-size: 1.2em;
+}
+/* スマホ用メニュー */
+.nav_icon, .sp_menu {
+	display: none;
+}
+/* メインイメージ */
+.main_image {
+	position: relative;
+	width: 100%;
+	height: 590px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.main_image::before{
+	content: '';
+	background-color: rgba(0,0,0,0.2);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.main_image .catch {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	font-family: 'Yellowtail', cursive;
+	font-size: 3.6em;
+	letter-spacing: 2px;
+	color: #333;
+	transform: rotate(-11.69deg);
+}
+.main_image h2 {
+	position: absolute;
+	top: 140px;
+	left: 70px;
+	font-size: 5.6em;
+	letter-spacing: 2px;
+	line-height: 1.2em;
+	color: #fff;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+.main_image .description {
+	position: absolute;
+	top: 290px;
+	left: 70px;
+	font-size: 1.6em;
+	line-height: 1.4em;
+	color: #fff;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+/* コンテンツ */
+.contents ul {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.contents ul li {
+	width: 25%;
+	height: 190px;
+	margin-top: 2px;
+	margin-left: 2px;
+	position: relative;
+}
+.contents ul li:nth-child(1) {
+	background-image: url(../images/contents_1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: 0;
+}
+.contents ul li:nth-child(2) {
+	background-image: url(../images/contents_2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.contents ul li:nth-child(3) {
+	background-image: url(../images/contents_3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.contents ul li:nth-child(4) {
+	background-image: url(../images/contents_4.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.contents ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;
+	font-size: 1.8em;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+.contents ul li:nth-child(odd) a {
+	background: rgba(60, 156, 216, 0.6);
+}
+.contents ul li:nth-child(even) a {
+	background: rgba(209, 201, 0, 0.6);
+}
+.contents ul li a:hover {
+	background: rgba(196, 196, 196, 0.6);
+}
+.contents ul li span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	line-height: 1.2em;
+}
+/* 特集、建築事例、施工事例の幅 */
+.special, .house, .room {
+	width: 1000px;
+	margin: 100px auto;
+}
+/* 特集 */
+.special {
+	height: 350px;
+	background-image: url(../images/special_image.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.special::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 100px 100px 0 0;
+	border-color: #1B8BD1 transparent transparent transparent;
+}
+.special::after {
+	content: '特集';
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	z-index: 100;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 1.8em;
+}
+.special h2 {
+	position: absolute;
+	left: 120px;
+	top: 10px;
+	background-color: #ffffff;
+	padding: 20px 40px;
+	font-size: 3em;
+	font-weight: bold;
+	letter-spacing: 2px;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+.special h2 span {
+	display: block;
+	margin-left: 10px;
+	font-size: 0.6em;
+	font-weight: normal;
+}
+.special h2 span:nth-child(2) {
+	margin-left: 20px;
+}
+.special button {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	background-color: #ffffff;
+	border: 1px solid #333333;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+.special button:hover {
+	background-color: #D1C900;
+}
+.special button span {
+	margin-right: 15px;
+	letter-spacing: 5px;
+}
+.special button img {
+	width: 20px;
+	height: 20px;
+}
+/* 建築事例、施工事例の見出し */
+.house h2, .room h2 {
+	font-size: 2.4em;
+	font-weight: bold;
+	text-align: center;
+	margin: 40px 0;
+}
+.house h2 span, .room h2 span {
+	display: block;
+	padding-top: 20px;
+	font-size: 1em;
+	font-weight: normal;
+	font-family: 'Yellowtail', cursive;
+}
+.house h2 span::before{
+	content: '';
+	display: block;
+	background: #D1C900;
+	height: 3px;
+	width: 350px;
+	margin: 0 auto 20px;
+}
+.room h2 span::before{
+	content: '';
+	display: block;
+	background: #1B8BD1;
+	height: 3px;
+	width: 350px;
+	margin: 0 auto 20px;
+}
+/* 建築事例、施工事例の内容 */
+.article ul li {
+	height: auto;
+	margin: 0 10px;
+}
+.article ul li a img {
+	width: 100%;
+	height: auto;
+}
+.article ul li a:hover img {
+	opacity: 0.6;
+}
+.article ul li a .article_txt {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: #f5f5f5;
+}
+.article ul li a:hover .article_txt {
+	background-color: #ffffff;
+}
+.article_txt .tag {
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 7px;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+.article_txt .data {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #6E6F72;
+}
+.article_txt .title {
+	font-size: 1.6em;
+	line-height: 1.2em;
+}
+/* タグの色 */
+.house .article_txt .tag {
+	background-color: #D1C900;
+}
+.room .article_txt .tag {
+	background-color: #1B8BD1;
+}
+/*カルーセルナビ*/
+.slick-prev:before {
+	background-image: url(../images/prev.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.slick-next:before {
+	background-image: url(../images/next.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+/* フッター */
+footer {
+	width: 100%;
+}
+footer .infomation {
+	background-color: #C4C4C4;
+	padding: 20px 0;
+	text-align: center;
+}
+footer .infomation p {
+	font-size: 1.6em;
+	margin-bottom: 10px;
+}
+footer .infomation p:nth-of-type(2) {
+	font-size: 3em;
+	font-weight: bold;
+}
+footer .menu {
+	background-color: #1B8BD1;
+	padding: 20px 30%;
+	display: flex;
+	justify-content: space-between;
+}
+footer .menu li a {
+	font-size: 1.4em;
+	color: #ffffff;
+}
+footer .menu li a:hover {
+	color: #333333;
+}
+footer .copyright {
+	background-color: #6E6F72;
+	text-align: center;
+	padding: 10px 0;
+}
+footer .copyright p {
+	font-size: 1.4em;
+	color: #ffffff;
+}
+/* ########### 640px以下 ########### */
+
+@media screen and (max-width: 640px) {
+	/* ヘッダー */
+	body {
+		position: relative;
+	}
+	header {
+		width: 100%;
+		padding: 0;
+		position: fixed;
+		z-index: 100;
+		background-color: #ffffff;
+	}
+	header .header_inner {
+		width: 90%;
+	}
+	header h1 {
+		margin: 0 auto;
+	}
+	header h1 img {
+		width: 130px;
+		height: auto;
+	}
+	header nav {
+		display: none;
+	}
+	/* スマホ用メニュー */
+	.nav_icon {
+		display: block;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 300;
+		background: #ffffff;
+		padding: 10px;
+		border-radius: 50%;
+		box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.25);
+	}
+	.nav_icon img {
+		width: 30px;
+		height: 30px;
+	}
+	.sp_menu {
+		display: block;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 200;
+		background: #ffffff;
+	}
+	.sp_menu ul {
+		width: 80%;
+		margin: 30% auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.sp_menu ul li {
+		width: 48%;
+		border: 2px solid #6E6F72;
+		margin-bottom: 30px;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.sp_menu ul li img {
+		display: block;
+		width: 40%;
+		height: auto;
+		margin: auto;
+	}
+	.sp_menu ul li span {
+		display: block;
+		font-size: 1.6em;
+		margin-top: 10px;
+		text-align: center;
+	}
+	/* メインイメージ */
+	.main_image {
+		height: 400px;
+		background-position: center center;
+	}
+	.main_image .catch {
+		top: 70px;
+		left: 20px;
+		font-size: 2.6em;
+	}
+	.main_image h2 {
+		position: absolute;
+		top: 130px;
+		left: 20px;
+		font-size: 3.2em;
+	}
+	.main_image .description {
+		top: 220px;
+		left: 20px;
+		width: 80%;
+		font-size: 1.4em;
+	}
+	/* コンテンツ */
+	.contents ul {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	.contents ul li {
+		width: 50%;
+		height: 120px;
+		margin-top: 0;
+		margin-left: 0;
+		background-position: center center;
+	}
+	.contents ul li:nth-child(1) a,
+	.contents ul li:nth-child(4) a {
+		background: rgba(60, 156, 216, 0.6);
+	}
+	.contents ul li:nth-child(2) a,
+	.contents ul li:nth-child(3) a {
+		background: rgba(209, 201, 0, 0.6);
+	}
+	/* 特集、建築事例、施工事例の幅 */
+	.special, .house, .room {
+		width: 90%;
+		margin: 60px auto;
+	}
+	/* 特集 */
+	.special {
+		height: 500px;
+		background-position: center center;
+	}
+	.special h2 {
+		font-size: 2.6em;
+		left: 0;
+		top: 300px;
+		padding: 20px 10px;
+		-webkit-writing-mode: horizontal-tb;
+		-ms-writing-mode: lr-tb;
+		writing-mode: horizontal-tb;
+	}
+	.special h2 span {
+		display: block;
+		margin-left: 0;
+		margin-bottom: 5px;
+	}
+	.special h2 span:nth-child(2) {
+		margin-left: 0;
+	}
+	.special button {
+		padding: 10px 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit- transform: translateX(-50%);
+	}
+	/* 建築事例、施工事例の見出し */
+	.house h2, .room h2 {
+		font-size: 2em;
+	}
+	.house h2 span::before,
+	.room h2 span::before {
+		width: 100%;
+	}
+	/* フッター */
+	footer .menu {
+		flex-direction: column;
+		text-align: center;
+	}
+	footer .menu li {
+		margin-bottom: 15px;
+	}
+	footer .menu li:nth-child(4) {
+		margin-bottom: 0;
+	}
+}
